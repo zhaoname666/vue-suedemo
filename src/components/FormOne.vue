@@ -74,7 +74,7 @@ console.log(route.query.img, "---------------");
 const size = ref("default");
 
 const fileInput = ref(null);
-const imageUrl = ref("http://47.94.4.201" + route.query.img);
+const imageUrl = ref("https://www.zzgoodqc.cn/" + route.query.img);
 const triggerFileInput = () => {
   fileInput.value.click();
 };
@@ -109,7 +109,7 @@ async function submitForm() {
   let img = null;
   await getImges(imageUrl.value).then((res) => {
     console.log(res);
-    img = "http://47.94.4.201" + res.data.url;
+    img = "https://www.zzgoodqc.cn/" + res.data.url;
   });
   let sun = {
     name: form.value.name,
